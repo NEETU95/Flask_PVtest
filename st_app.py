@@ -5,7 +5,7 @@ from main import pdf_extraction
 def st_main():
 	params = st.experimental_get_query_params()
 	print('params : ',params)
-	pdf_info = params.get("pdf_info", str)[0]
+	pdf_info = params.get("pdf_info", [""])[0]
 	print("pdf_info : ", str(pdf_info))
 
 	try:
