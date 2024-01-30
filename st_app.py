@@ -3,7 +3,8 @@ import urllib.parse
 from main import pdf_extraction
 
 def st_main():
-	params = st.experimental_get_query_params()
+	params = st.query_params.get_all("params")
+
 	print('params : ',params)
 	pdf_info = params.get("pdf_info", [""])[0]
 	print("pdf_info : ", str(pdf_info))
