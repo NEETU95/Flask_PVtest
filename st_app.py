@@ -6,7 +6,7 @@ def st_main():
 	params = st.query_params.get_all("pdf_info")
 
 	print('params : ',params)
-	pdf_info = params.get("pdf_info", [""])[0]
+	pdf_info = params.get("pdf_info", [""])
 	print("pdf_info : ", str(pdf_info))
 
 	try:
