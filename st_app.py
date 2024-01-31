@@ -14,6 +14,8 @@ def st_main():
 		try:	
 			st.write("Streamlit Configuration:")
 			st.write("Current value of enableCORS:", cors_enabled)
+			st.write("Current value of enableXsrfProtection:", st.get_option("server.enableXsrfProtection"))
+			st.write("Current value of enableWebsocketCompression:", st.get_option("server.enableWebsocketCompression"))
 			trail = pdf_extraction(pdf_info)
 			return trail
 		except Exception as e:
@@ -22,3 +24,5 @@ def st_main():
 
 if __name__ == "__main__":
     st_main()
+	
+
