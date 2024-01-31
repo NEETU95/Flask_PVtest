@@ -10,7 +10,9 @@ def st_main():
 	print("pdf_info : ", str(pdf_info))
 	st.query_params.clear()
 	if pdf_info:
-		try:
+		try:	
+			st.write("Streamlit Configuration:")
+			st.write(st.config)
 			trail = pdf_extraction(pdf_info)
 			return trail
 		except Exception as e:
