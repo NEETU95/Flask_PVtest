@@ -12,7 +12,7 @@ def st_main():
 	if pdf_info:
 		try:	
 			st.write("Streamlit Configuration:")
-			st.write(st.config)
+			st.write(st.config.show_config)
 			trail = pdf_extraction(pdf_info)
 			return trail
 		except Exception as e:
