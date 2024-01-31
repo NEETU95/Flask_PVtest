@@ -8,6 +8,7 @@ def st_main():
 	print('params : ',params)
 	pdf_info = params.get("pdf_info", [""])
 	print("pdf_info : ", str(pdf_info))
+	st.query_params.clear()
 	if pdf_info:
 		try:
 			trail = pdf_extraction(pdf_info)
