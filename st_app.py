@@ -9,10 +9,11 @@ def st_main():
 	pdf_info = params.get("pdf_info", [""])
 	print("pdf_info : ", str(pdf_info))
 	st.query_params.clear()
+	cors_enabled = st.get_option("server.enableCORS")
 	if pdf_info:
 		try:	
 			st.write("Streamlit Configuration:")
-			st.write(st.config.show_config)
+			st.write("Current value of enableCORS:", cors_enabled)
 			trail = pdf_extraction(pdf_info)
 			return trail
 		except Exception as e:
